@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FitConnecticut.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Fit Connecticut</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeaderPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        
+        <!-- Header starts here -->
+        <div class="header">
+            <div class="col-md-12">
+                <div class="col-md-3 text-center">
+                   <!-- <h2>Logo goes here </h2> -->
+                </div>
+                <div class="col-md-6">
+                    <!--<h2>banner goes here </h2> -->
+                </div>
+                <div class="col-md-3"> <!--Must change on stylesheet-->                           
+                    <div class="social facebook">
+                        <i class="fa fa-facebook fa-3x"></i>       
+                    </div>
+                    <div class="social twitter">
+                        <i class="fa fa-twitter fa-3x"></i>   
+                    </div>
+                    <div class="social instagram">
+                        <i class="fa fa-instagram fa-3x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header ends here -->
+
+        <!-- Navigation Bar starts here -->
+        <div class="navbar navbar-inverse fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"><img class="navLogo" src="Images/FitConnecticutLogo.png"/></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/Default">About</a></li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Outdoor Activities &nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><asp:HyperLink NavigateUrl="~/Hiking" runat="server">Hiking</asp:HyperLink></li>
+                                <li role="separator" class="divider"></li>
+                                <li><asp:HyperLink NavigateUrl="~/Camping" runat="server">Camping</asp:HyperLink></li>
+                                <li role="separator" class="divider"></li>
+                                <li><asp:HyperLink NavigateUrl="~/Swimming" runat="server">Swimming</asp:HyperLink></li>
+                            </ul>
+                        </li>
+                        <li><a runat="server" href="~/FitnessGuide">Fitness Guide</a></li>
+                        <li><a runat="server" href="~/FitnessCalculator">Fitness Calculator</a></li>
+                    </ul>
+                    <!-- Login navbar section -->
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Bar ends here -->
+
+        <!-- Main content starts here -->
+        <div class="body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+        </div>
+        <!-- Main content ends here -->
+
+        <!-- Footer starts here -->
+        <div class="footer">
+            <div class="topFooter col-md-12">
+                <div class="col-md-4">
+                    <h2>Contact Information</h2>
+                    <hr>
+                    <div class="col-md-12">
+                       <div class="col-md-4">
+                           <img class="topFooterLogo" src="Images/FitConnecticutLogo.png" />
+                       </div>
+                       <div class="col-md-8">
+                           <p><a><i class="fa fa-map-marker fa-2x fa-fw" ></i>&nbsp; 1234 Exersice Dr</a></p>
+                           <p><a><i class="fa fa-fw" style="padding-left:45px;"></i>Fairfield, CT 06825</a></p>
+                           <p><a><i class="fa fa-phone fa-2x fa-fw" ></i>&nbsp; (203)555-1234</a></p>
+                           <p><a><i class="fa fa-envelope fa-2x fa-fw"></i>&nbsp; info@FitConnecticut.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2>Have Questions...</h2>
+                    <div class="form-area">  
+    				    <div class="form-group">
+						    <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name">
+					    </div>
+					    <div class="form-group">
+						    <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+					    </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="3"></textarea>             
+                        </div>
+            
+                        <button type="button" id="submit" name="submit" class="btn btn-md pull-right">Submit</button>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding-left:150px;"> <!--Must change on stylesheet-->
+                    <div class="social facebook">
+                        <i class="fa fa-facebook fa-3x"></i>       
+                    </div>
+                    <div class="social twitter">
+                        <i class="fa fa-twitter fa-3x"></i>   
+                    </div>
+                     <div class="social instagram">
+                        <i class="fa fa-instagram fa-3x"></i>   
+                    </div>
+                </div>
+            </div>
+            <div class="bottomFooter col-md-12">
+                <p>&copy; <%: DateTime.Now.Year %> - Fit Connecticut</p>
+            </div>
+        </div>
+        <!-- Footer ends here -->
+    </form>
+</body>
+</html>

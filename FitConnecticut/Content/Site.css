@@ -1,0 +1,320 @@
+﻿/***  MASTER PAGE  ***/
+/** Header **/
+.header {
+    height: 350px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    background-image: url('../Images/FitConnecticutHeader.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header img{
+    width:150px;
+    height:150px;
+    padding-bottom:20px;
+}
+.header h1{
+    text-align:center;
+    padding-top:20px;
+}
+/* For social media */
+.social{
+    text-align:center;
+    width:70px;
+    height:70px;
+    float:left;
+    background:rgb(255,255,255);
+    border:1px solid rgb(204,204,204);
+    box-shadow:0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius:100px;
+    margin:30px 20px 20px 0;
+    padding:15px;
+}
+.facebook:hover{background:#3b5998;color:#FFF;}
+.twitter:hover{background:#00acee;color:#FFF;}
+.instagram:hover{background:#517fa4;color:#FFF;}
+
+/** Navigation**/
+.navbar {
+    background: #303644;
+    border-color:#303644;
+    border-radius:0px;
+    height:70px;
+    font-size:16px;
+    margin-bottom:0px;
+}
+
+.navLogo{
+    width: 120px;
+    height: 50px;
+}
+/* Override navigation bar*/
+.nav a {
+    font-size: 18px;
+}
+.nav li{
+    padding-left:25px;
+    margin-bottom:15px;
+}
+ul.dropdown-menu {
+    margin-left: 25px;
+}
+.dropdown-menu > li > a {
+    padding-left: 20px;
+    width: 163px;
+}
+/**  Footer  **/
+.topFooter{
+    height:300px;
+    background-color:#6B6B6B;
+    color:#6B6B6B;
+    padding-top:0px;
+}
+.topFooter h2, p, a {
+        color: #EAEAEA;
+}
+.topFooter a:hover{
+    text-decoration:none;
+    color:#EAEAEA;
+}
+
+.topFooterLogo{
+    width:150px;
+    height:100px;
+    padding-top:20px;
+}
+.bottomFooter{
+    height:40px;
+    background-color:#494949;
+    text-align:center;
+    padding-top:10px;
+}
+
+/*** DEFAULT PAGE***/
+.container h1{
+    font-size:5em;
+    color:#4cff00;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:600;
+    font-variant-caps:normal;    
+}
+.container h3{
+    font-size:3em;
+    color:#303644;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:400;
+    font-variant-caps:normal;    
+}
+.container h4{
+    font-size:2em;
+    color:#303644;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:300;
+    font-variant-caps:normal;    
+}
+
+.container p{
+    font-size:1.5em;
+    color:#AFAFAF;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:20px;
+    text-align:justify;   
+}
+.btn-primary{
+    background-color:#303644;
+    border-color:#303644;
+}
+
+.aboutThumbnail{
+    margin-top:20px;
+}
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 600px;
+}
+.fade-carousel .carousel-inner .item {
+    height: 600px;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color:#4cff00;
+    border-color: #4cff00;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: 0;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+    background-image: url('../Images/CTOutdoor.jpg');
+}
+.fade-carousel .slides .slide-2 {
+    background-image: url('../Images/CTOutdoorII.jpg');
+}
+.fade-carousel .slides .slide-3 {
+    background-image: url('../Images/CTOutdoorIII.jpg');
+}
+
+/** FITNESS CALCULATOR PAGE **/
+.headerCalculator {
+    background-image: url('../Images/Fitness2.jpg');
+    height: 550px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.results{
+    font-size:2em;
+    color:#4CFF00;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:300;
+    font-variant-caps:normal;    
+    padding-bottom:20px;
+}
+
+         .banner_title {
+                position: absolute;
+                top: 56%;
+                font-size: 100px;
+                color: #fff;
+                left: 20%;
+                font-weight: bold;
+                text-shadow: 10px 10px 4px #3b3b3b;
+            }
+
+
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+/********************************/
+/*          Fitness Guide       */
+/********************************/
+.fitnessguide {
+    background-image: url('../Images/fitnessguide.gif');
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/********************************/
+/*          Camping             */
+/********************************/
+.camping {
+    background-image: url('../Images/camping.gif');
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/********************************/
+/*          Hiking              */
+/********************************/
+.hiking {
+    background-image: url('../Images/hiking.gif');
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+/********************************/
+/*          Swimming             */
+/********************************/
+.swimming {
+    background-image: url('../Images/swimming.gif');
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
