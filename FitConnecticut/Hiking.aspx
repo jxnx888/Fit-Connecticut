@@ -1,23 +1,10 @@
 ﻿<%@ Page Title="Hiking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Hiking.aspx.cs" Inherits="FitConnecticut.Hiking" %>
-<asp:Content ID="Content2" ContentPlaceHolderID="HeaderPlaceHolder" runat="server">
-     <style>
-         .banner_title {
-                position: absolute;
-                top: 56%;
-                font-size: 100px;
-                color: #fff;
-                left: 37%;
-                font-weight: bold;
-                text-shadow: 10px 10px 4px #3b3b3b;
-            }
-     </style>
-     
- </asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <div class="hiking">
         
-        <div class="banner_title">HIKING</div>
+        <div class="banner_title_hiking">HIKING</div>
     </div>
       <div class="FG container">
 
