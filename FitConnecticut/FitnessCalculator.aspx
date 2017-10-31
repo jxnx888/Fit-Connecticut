@@ -2,9 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <!-- Header starts here -->
-<div>
-    <img src="Images/BMI1.gif" />
-    <div class="banner_title">FITNESS CALCULATOR</div>
+<div class="fitnesscalculator">
+  
+    <div class="banner_title_fitnesscalculator">FITNESS<br />CALCULATOR</div>
 </div>
 
 <!-- Cards start here -->

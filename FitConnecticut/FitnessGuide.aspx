@@ -35,22 +35,13 @@
            color:#EAEAEA;
            text-align: center;
        }
-       .banner_title {
-                position: absolute;
-                top: 56%;
-                font-size: 100px;
-                color: #fff;
-                left: 30%;
-                font-weight: bold;
-                text-shadow: 10px 10px 4px #3b3b3b;
-
-            }
+     
     </style>
     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
      <div class="fitnessguide">
-        <div class="banner_title">FITNESS GUIDE</div>
+        <div class="banner_title_fitnessguide">FITNESS GUIDE</div>
     </div>
     <div class="FG container">
     <div class=" col-md-6">
